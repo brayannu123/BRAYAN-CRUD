@@ -6,4 +6,3 @@ Ionic Framework (UI y UX móvil)
 Angular (estructura del proyecto y lógica de negocio)
 Firebase Firestore (base de datos en tiempo real)
 Firebase Hosting (despliegue de la aplicación)
-
