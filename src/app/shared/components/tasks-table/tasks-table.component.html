@@ -1,0 +1,18 @@
+<div class="tasks-container">
+  <div *ngFor="let task of tasks$ | async" class="task-card">
+    <h2 class="task-title">{{ task.title }}</h2>
+    <p class="task-description">{{ task.description }}</p>
+    <p class="task-date">{{ task.date }}</p>
+    <span class="task-status" [ngClass]="task.completed ? 'completed' : 'pending'">
+      {{ task.completed ? 'Completado' : 'Pendiente' }}
+    </span>
+    <div class="task-actions">
+      <ion-button fill="clear" color="primary" (click)="openTaskModal(task)">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="task.id" fill="clear" color="danger" (click)="confirmDeleteTask(task.id)">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+</div>
